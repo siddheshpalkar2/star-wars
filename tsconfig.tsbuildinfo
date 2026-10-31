@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/spaceinvadersgame.tsx","./src/components/vapormusicplayer.tsx","./src/services/soundeffects.ts","./src/services/synthwavemusic.ts","./src/types/game.ts","./src/types/music.ts"],"version":"5.7.3"}

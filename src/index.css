@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0d061c;
+}
+::-webkit-scrollbar-thumb {
+  background: #7928ca;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff007f;
+}
+
+/* CRT Scanline and Bezel Effects */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  ), 
+  linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.04),
+    rgba(0, 255, 0, 0.02),
+    rgba(0, 0, 255, 0.04)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.985; }
+  50% { opacity: 1; }
+  100% { opacity: 0.99; }
+}
+
+.crt-curve {
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.9),
+              inset 0 0 20px rgba(255, 42, 133, 0.25),
+              0 0 35px rgba(217, 70, 239, 0.3);
+  border-radius: 18px;
+}
+
+/* 3D Vaporwave Perspective Grid */
+.vapor-grid {
+  background-image: 
+    linear-gradient(to right, rgba(217, 70, 239, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 70, 239, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(300px) rotateX(65deg);
+  transform-origin: center bottom;
+}
+
+/* Neon text shadows */
+.neon-text-pink {
+  text-shadow: 0 0 5px #ff2a85, 0 0 15px #ff2a85, 0 0 30px #ff007f;
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff, 0 0 30px #0284c7;
+}
+
+.neon-text-yellow {
+  text-shadow: 0 0 5px #ffde59, 0 0 15px #ffde59, 0 0 25px #f59e0b;
+}
+
+.neon-text-purple {
+  text-shadow: 0 0 5px #c084fc, 0 0 15px #9333ea, 0 0 30px #7928ca;
+}
+
+/* Retro arcade button press effect */
+.arcade-btn {
+  transition: all 0.15s ease-out;
+  transform: translateY(0);
+}
+.arcade-btn:active {
+  transform: translateY(2px);
+}
